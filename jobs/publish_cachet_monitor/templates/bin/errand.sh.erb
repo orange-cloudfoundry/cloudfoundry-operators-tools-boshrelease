@@ -15,7 +15,8 @@ CF_APP_NAME='<%= p("cf.appname") %>'
 CF_DOMAIN='<%= p("cf.domain") %>'
 
 cd /var/vcap/jobs/publish_cachet_monitor/config
-ln -sf /var/vcap/packages/cachet-monitor/cachet-monitor_linux_amd64 cachet-monitor_linux_amd64
+cp -f /var/vcap/packages/cachet-monitor/cachet-monitor_linux_amd64 cachet-monitor_linux_amd64
+chmod ug+x cachet-monitor_linux_amd64
 
 
 cf login -a $CF_API_URL  -u $CF_USERNAME -p $CF_PASSWORD  -o $CF_ORG -s $CF_DEFAULT_SPACE --skip-ssl-validation
