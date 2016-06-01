@@ -35,5 +35,28 @@ properties:
     description: cf app name to push. will also be the hostname on cf.domain
   cf.domain:
     description: domain name to expose the cf app
-    
+  cachet.api_url:
+    description: cachet server api url
+    exemple: http://cachet/api/v1
+  cachet.api_token:
+    description: cachet server api token
+    exemple: 56788974353453453453
+  cachet.monitor.name:
+    description: monitor name
+    default: true
+  cachet.monitor.strict_tls:
+    description: should ssl cert be checked
+    default: true
+  cachet.monitor.url:
+    description: should ssl cert be checked
+    example: https://google.com
+  cachet.monitor.interval:
+    description: should ssl cert be checked
+    default: 80
+  cachet.monitor.expected_status_code:
+    description: expected http status code
+    default: 200
+  cachet.monitor.threshold:
+    description: threshold
+    default: 80
     
