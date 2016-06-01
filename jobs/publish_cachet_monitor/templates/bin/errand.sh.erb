@@ -19,7 +19,12 @@ cf login -a $CF_API_URL  -u $CF_USERNAME -p $CF_PASSWORD  -o $CF_ORG -s $CF_DEFA
 
 cf create-space $CF_TARGET_SPACE
 cf target -s $CF_TARGET_SPACE
-cf push $CF_APP_NAME  -p /var/vcap/packages/cachet-monitor/cachet-monitor -b go_buildpack -i 1 --no-start --no-route -t 120
+
+
+cd /var/vcap/jobs/publish_cachet_monitor/config
+ln -sf /var/vcap/packages/cachet-monitor/cachet-monitor_linux_amd64 cachet-monitor_linux_amd64
+
+cf push $CF_APP_NAME  -b go_buildpack -i 1 --no-start --no-route -t 120
 
 #start cf app
 cf start $CF_APP_NAME
