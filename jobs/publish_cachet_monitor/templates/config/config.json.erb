@@ -1,12 +1,12 @@
 {
   "api_url": "<%= p("cachet.api_url") %>",
   "api_token": "<%= p("cachet.api_token") %>",
-  "insecure_api": <%= p("insecure_api") %>,
+  "insecure_api": <%= p("cachet.insecure_api") %>,
   "monitors": [
     {
       "name": "<%= p("cachet.monitor.name") %>",
       "url":  "<%= p("cachet.monitor.url") %>",
-      "threshold": <%= p("cf.api_url") %>,
+      "threshold": <%= p("cachet.monitor.threshold") %>,
       "component_id": 1,
       "interval": <%= p("cachet.monitor.interval") %>,
       "expected_status_code": <%= p("cachet.monitor.expected_status_code") %>,
