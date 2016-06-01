@@ -1,5 +1,28 @@
 # BOSH Release for cloudfoundry-operators-tools
 
+## Purpose
+
+The purpose of this bosh release is to offer some preconfigured cloudfoundry applications components, for use in Bosh / Cloudfoundry operations.
+
+The idea is to ease bosh ops activities, providing them usefull features, packaged in a bosh standard way (manifest, errand, etc ..)
+
+
+### Cachet Server and Monitor
+
+This release provide 2 bosh errands, pushing cf application for :
+* cachet server
+* cachet monitor
+
+usefull links:
+* https://github.com/ArthurHlt/Cachet-cf
+* https://github.com/CastawayLabs/cachet-monitor/
+
+prerequisite:
+* a cloudfoundry org admin account
+* cf marketplace with mysql for zipkin server
+* open cf application security group, so that cachet monitor can reach cachet server
+
+
 ## Usage
 
 To use this bosh release, first upload it to your bosh:
