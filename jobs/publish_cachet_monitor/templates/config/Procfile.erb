@@ -1,1 +1,1 @@
-web: netcat -l $PORT& ;./cachet-monitor_linux_amd64 -c "./config.json" -name "monitor"
+web: ./cachet-monitor_linux_amd64 -c "./config.json" -name "monitor"& while true ; do nc -l "$PORT" < index.html ; done
