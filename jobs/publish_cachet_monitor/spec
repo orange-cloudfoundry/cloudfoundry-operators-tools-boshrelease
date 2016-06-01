@@ -46,7 +46,7 @@ properties:
     exemple: 56788974353453453453
   cachet.monitor.name:
     description: monitor name
-    default: true
+    example: my monitor
   cachet.monitor.strict_tls:
     description: should ssl cert be checked
     default: true
