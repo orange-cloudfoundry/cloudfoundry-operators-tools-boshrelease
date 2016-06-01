@@ -35,3 +35,11 @@ properties:
     description: cf app name to push. will also be the hostname on cf.domain
   cf.domain:
     description: domain name to expose the cf app
+  cachet.db_service.name:
+    description: markerplace service name for mysql
+    default: p-mysql
+  cachet.db_service.plan:
+    description: markerplace service name for mysql
+    default: 100mb
+    
+    

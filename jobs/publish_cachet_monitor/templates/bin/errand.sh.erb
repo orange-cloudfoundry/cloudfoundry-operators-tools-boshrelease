@@ -26,6 +26,11 @@ cf target -s $CF_TARGET_SPACE
 
 cf push $CF_APP_NAME  -b binary_buildpack -i 1 --no-start --no-route -t 120
 
+cf create-service <%= p("cachet.db_service.name") %> <%= p("cachet.db_service.plan") %> mysql-cachet 
+cf bind-service $CF_APP_NAME mysql-cachet 
+
 #start cf app
 cf start $CF_APP_NAME
+
+
 cf restage $CF_APP_NAME
