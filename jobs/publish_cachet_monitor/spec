@@ -10,6 +10,7 @@ templates:
   bin/errand.sh.erb: bin/errand.sh
   config/config.json.erb: config/config.json
   config/Procfile.erb: config/Procfile
+  config/index.html.erb: config/index.html
 
 properties:
   cf.api_url:
