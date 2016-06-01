@@ -1,0 +1,6 @@
+[submodule "src/cachet-monitor"]
+	path = src/cachet-monitor
+	url = https://github.com/CastawayLabs/cachet-monitor/
+[submodule "src/Cachet-cf"]
+	path = src/Cachet-cf
+	url = https://github.com/ArthurHlt/Cachet-cf
