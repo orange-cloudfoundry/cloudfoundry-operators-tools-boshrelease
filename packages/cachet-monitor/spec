@@ -1,4 +1,6 @@
 ---
 name: cachet-monitor
 dependencies: []
-files: []
+files:
+- cachet-monitor/cachet-monitor_linux_amd64
+
