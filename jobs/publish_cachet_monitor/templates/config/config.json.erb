@@ -1,16 +1,16 @@
 {
-  "api_url": "https://cachet.cw-lz-apps.elpaaso.net/api/v1",
-  "api_token": "9yMHsdioQosnyVK4iCVR",
-  "insecure_api": true,
+  "api_url": "<%= p("cachet.api_url") %>",
+  "api_token": "<%= p("cachet.api_token") %>",
+  "insecure_api": <%= p("insecure_api") %>,
   "monitors": [
     {
-      "name": "google",
-      "url":  "https://google.com",
-      "threshold": 80,
+      "name": "<%= p("cachet.monitor.name") %>",
+      "url":  "<%= p("cachet.monitor.url") %>",
+      "threshold": <%= p("cf.api_url") %>,
       "component_id": 1,
-      "interval": 10,
-      "expected_status_code": 200,
-      "strict_tls": true
+      "interval": <%= p("cachet.monitor.interval") %>,
+      "expected_status_code": <%= p("cachet.monitor.expected_status_code") %>,
+      "strict_tls": <%= p("cachet.monitor.strict_tls") %>
     }
   ]
 }
