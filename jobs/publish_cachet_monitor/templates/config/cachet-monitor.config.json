@@ -1,0 +1,35 @@
+{
+  // URL for the API. Note: Must end with /api/v1
+  "api_url": "https://cachet.cw-lz-apps.elpaaso.net/api/v1",
+  // Your API token for Cachet
+  "api_token": "elpaaso",
+  // optional, false default, set if your certificate is self-signed/untrusted
+  "insecure_api": true,
+  "monitors": [{
+    // required, friendly name for your monitor
+    "name": "Name of your monitor",
+    // required, url to probe
+    "url": "Ping URL",
+    // optional, http method (defaults GET)
+    "method": "get",
+    // self-signed ssl certificate
+    "strict_tls": true,
+    // seconds between checks
+    "interval": 10,
+    // post lag to cachet metric (graph)
+    // note either metric ID or component ID are required
+    "metric_id": <metric id>,
+    // post incidents to this component
+    "component_id": <component id>,
+    // If % of downtime is over this threshold, open an incident
+    "threshold": 80,
+    // optional, expected status code (either status code or body must be supplied)
+    "expected_status_code": 200,
+    // optional, regular expression to match body content
+    "expected_body": "P.*NG"
+  }],
+  // optional, system name to identify bot (uses hostname by default)
+  "system_name": "",
+  // optional, defaults to stdout
+  "log_path": ""
+}

@@ -1,0 +1,1 @@
+web: ./cachet-monitor_linux_amd64 -c "./config.json" -name "monitor"

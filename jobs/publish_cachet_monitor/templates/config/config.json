@@ -1,0 +1,16 @@
+{
+  "api_url": "https://cachet.cw-lz-apps.elpaaso.net/api/v1",
+  "api_token": "9yMHsdioQosnyVK4iCVR",
+  "insecure_api": true,
+  "monitors": [
+    {
+      "name": "google",
+      "url":  "https://google.com",
+      "threshold": 80,
+      "component_id": 1,
+      "interval": 10,
+      "expected_status_code": 200,
+      "strict_tls": true
+    }
+  ]
+}
