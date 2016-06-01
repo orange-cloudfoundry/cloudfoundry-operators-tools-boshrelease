@@ -25,6 +25,10 @@ cf push $CF_APP_NAME  -p /var/vcap/packages/cachet-cf-ready/cachet-cf-bundled.zi
 cf map-route $CF_APP_NAME $CF_DOMAIN --hostname $CF_APP_NAME  
 
 
+cf create-service <%= p("cachet.db_service.name") %> <%= p("cachet.db_service.plan") %> mysql-cachet 
+cf bind-service $CF_APP_NAME mysql-cachet 
+
+
 #start cf app
 cf start $CF_APP_NAME
 cf restage $CF_APP_NAME
