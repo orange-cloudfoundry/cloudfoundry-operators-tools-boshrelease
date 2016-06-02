@@ -28,6 +28,10 @@ cf map-route $CF_APP_NAME $CF_DOMAIN --hostname $CF_APP_NAME
 cf create-service <%= p("cachet.db_service.name") %> <%= p("cachet.db_service.plan") %> mysql-cachet 
 cf bind-service $CF_APP_NAME mysql-cachet 
 
+cf set-env $CF_APP_NAME APP_KEY <%= p("cachet.app_key") %>
+cf set-env $CF_APP_NAME APP_DEBUG <%= p("cachet.app_debug") %>
+
+
 
 #start cf app
 cf start $CF_APP_NAME
