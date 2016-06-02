@@ -38,4 +38,11 @@ properties:
   cachet.db_service.plan:
     description: markerplace service name for mysql
     default: 100mb
+  cachet.app_key:
+    description: cachet cipher key
+    exemple: xxxxxxxxxxxxxxxxxx
+  cachet.app_debug:
+    description: cachet debug mode
+    default: false
+    
     
