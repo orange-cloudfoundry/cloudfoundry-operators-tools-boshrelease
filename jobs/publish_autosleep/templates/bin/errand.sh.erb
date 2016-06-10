@@ -63,7 +63,7 @@ cf start $CF_APP_NAME
 cf restage $CF_APP_NAME
 
 #create service broker + update if already existing  
-cf create-service-broker <%= p("autosleep.broker_name") %> <%= p("autosleep.security.user.name") %> <%= p("autosleep.security.user.password") %> https://$CF_APP_NAME$.$CF_DOMAIN
+cf create-service-broker <%= p("autosleep.broker_name") %> <%= p("autosleep.security.user.name") %> <%= p("autosleep.security.user.password") %> https://$CF_APP_NAME.$CF_DOMAIN
 
 #offering-name corresponds to the value of cf.service.broker.id filled in the manifest file
 cf enable-service-access <%= p("autosleep.cf.service.broker.id") %> 
