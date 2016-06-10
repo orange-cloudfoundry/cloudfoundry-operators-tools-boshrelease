@@ -22,6 +22,9 @@ properties:
     description: autosleep db market place service plan to use
     default: 100mb
     
+  autosleep.security_group:
+    description: autosleep security group. must enable cf api access
+        
   autosleep.security.user.name:
     description: security username
     default: broker
