@@ -5,9 +5,9 @@ set -x
 . common/setup-java-prepackaging.sh
 
 cd ${BUILD_DIR}/autosleep/spring-apps/autowakeup-proxy
-../
-./mvnw clean install -DskipTests=true --settings settings.xml
-mv target/autowakeup-proxy-0.0.1-SNAPSHOT.jar  ${BUILD_DIR}
+../../gradlew build
+#./mvnw clean install -DskipTests=true --settings settings.xml
+mv build/bin/autowakeup-proxy-0.3.0-SNAPSHOT.war  ${BUILD_DIR}
 
 
 cd ${BUILD_DIR}
