@@ -1,0 +1,7 @@
+---
+name: bosh_deployer_pkg
+dependencies: []
+files:
+- bosh-deployer/**/*
+- openjdk/*
+- common/setup-java-prepackaging.sh
