@@ -30,9 +30,25 @@ cf create-route $CF_TARGET_SPACE  <%= p("autosleep.wake_domain") %> -n '*'
 cf map-route $CF_APP_NAME <%= p("autosleep.wake_domain") %> --hostname '*'
 
 
+#prepare JAVA_OPTS to pass setting to the spring app
+JAVA_OPTS="-Djava.security.egd=file:/dev/urandom \
+-Dlogging.level.org.springframework.web.filter.CommonsRequestLoggingFilter=ERROR \
+-Dsecurity.user.name=<%= p("autosleep.security.user.name") %> \
+-Dsecurity.user.password=<%= p("autosleep.security.user.password") %> \
+-Dcf.client.target.host=<%= p("autosleep.cf.client.target.host") %> \
+-Dcf.client.skip.ssl.validation=<%= p("autosleep.cf.client.skip.ssl.validation") %> \
+-Dcf.client.username=<%= p("autosleep.cf.client.username") %> \
+-Dcf.client.password=<%= p("autosleep.cf.client.password") %> \
+-Dcf.client.clientId=<%= p("autosleep.cf.client.clientId") %> \
+-Dcf.client.clientSecret=<%= p("autosleep.cf.client.clientSecret") %> \
+-Dcf.security.password.encodingSecret=<%= p("autosleep.cf.security.password.encodingSecret") %> \
+-Dcf.service.broker.id=<%= p("autosleep.cf.service.broker.id") %> \
+-Dcf.service.plan.id=<%= p("autosleep.cf.service.plan.id") %> \
+"
+
 
 #set cf env properties
-cf set-env $CF_APP_NAME JAVA_OPTS "-Djava.security.egd=file:/dev/urandom"
+cf set-env $CF_APP_NAME JAVA_OPTS "$JAVA_OPTS"
 cf set-env $CF_APP_NAME JBP_CONFIG_CONTAINER_CERTIFICATE_TRUST_STORE '{enabled: true}'
 
 
