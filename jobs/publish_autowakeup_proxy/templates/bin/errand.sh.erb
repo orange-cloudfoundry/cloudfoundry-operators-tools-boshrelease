@@ -25,9 +25,9 @@ cf map-route $CF_APP_NAME $CF_DOMAIN --hostname $CF_APP_NAME
 
 
 
-#set autowake on the concerned domains
-cf create-route $CF_TARGET_SPACE  mydomain.org -n '*'
-cf map-route $CF_APP_NAME mydomain.org --hostname '*'
+#set autowake on the concerned autowake domain
+cf create-route $CF_TARGET_SPACE  <%= p("autosleep.wake_domain") %> -n '*'
+cf map-route $CF_APP_NAME <%= p("autosleep.wake_domain") %> --hostname '*'
 
 
 
