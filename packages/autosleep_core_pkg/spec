@@ -1,5 +1,5 @@
 ---
-name: autosleepcore__pkg
+name: autosleepcore_pkg
 dependencies: []
 files:
 - autosleep/**/*
