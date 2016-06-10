@@ -8,16 +8,20 @@ The idea is to ease bosh ops activities, providing them usefull features, packag
 
 
 ### Orange AutoSleep Service for Cloudfoundry
-The aim of the auto-sleep project is to give the ability for Cloud Foundry operators to automatically have idle apps after a given period of inactivity, and then automatically started when end users access apps again through traffic their routes.
-This features, with a port of CF Diego overprovisionning, enables an economic management of Cloudfoundry Development orgs.
+The aim of the auto-sleep project is to give the ability for Cloud Foundry operators to automatically have cf apps idled, after a given period of inactivity, and then automatically restarted when end users access apps again through traffic their routes.
+This features, with some CF Diego overprovisionning, enables an economic management of Cloudfoundry Development orgs.
 
 This bosh release provides 3 errands :
 * publish_autosleep : install and publish the autosleep service broker 
 * publish_autowake_proxy: install and publish the autowake app, binding it to wildcard route domains
 * provision_autosleep: batch creates autosleep service instances in all the spaces of a given org 
-usefull links:
+recommanded reading before use:
 * https://github.com/Orange-OpenSource/cloudfoundry-operators-tools-boshrelease
 
+prerequisite:
+* a cloudfoundry autosleep account
+* cf marketplace with mysql for autosleep broker persistence
+* open cf application security group, so that autosleep and autowakeup cf apps can acces the cloudfoundry api
 
 
 
@@ -29,7 +33,7 @@ This release provide 2 bosh errands, pushing cf application for :
 * cachet server
 * cachet monitor
 
-usefull links:
+recommanded reading before use:
 * https://github.com/ArthurHlt/Cachet-cf
 * https://github.com/CastawayLabs/cachet-monitor/
 
