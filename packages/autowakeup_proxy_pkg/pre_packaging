@@ -4,11 +4,12 @@ set -x
 
 . common/setup-java-prepackaging.sh
 
-cd ${BUILD_DIR}/bosh-deployer
+cd ${BUILD_DIR}/autosleep/spring-apps/autowakeup-proxy
+../
 ./mvnw clean install -DskipTests=true --settings settings.xml
-mv target/bosh-deployer-0.0.1-SNAPSHOT.jar  ${BUILD_DIR}
+mv target/autowakeup-proxy-0.0.1-SNAPSHOT.jar  ${BUILD_DIR}
 
 
 cd ${BUILD_DIR}
-rm -rf bosh-deployer
+rm -rf autosleep
 

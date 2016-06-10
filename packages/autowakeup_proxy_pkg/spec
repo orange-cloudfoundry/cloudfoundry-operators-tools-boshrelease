@@ -1,7 +1,7 @@
 ---
-name: bosh_deployer_pkg
+name: autowakeup_proxy_pkg
 dependencies: []
 files:
-- bosh-deployer/**/*
+- autosleep/**/*
 - openjdk/*
 - common/setup-java-prepackaging.sh

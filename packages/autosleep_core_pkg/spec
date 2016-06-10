@@ -1,7 +1,7 @@
 ---
-name: bosh_deployer_pkg
+name: autosleepcore__pkg
 dependencies: []
 files:
-- bosh-deployer/**/*
+- autosleep/**/*
 - openjdk/*
 - common/setup-java-prepackaging.sh
