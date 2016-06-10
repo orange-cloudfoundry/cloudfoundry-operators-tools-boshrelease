@@ -10,10 +10,49 @@ templates:
   bin/errand.sh.erb: bin/errand.sh
 
 properties:
-  xx:
-    description: bosh director url
-    example: https://10.0.0.1:25555
-    default: xx
+  autosleep.broker_name:
+    description: registration name of the broker
+    default: autosleep-broker
+  autosleep.db.service:
+    description: autosleep db market place service to use
+    default: p-mysql
+
+  autosleep.db.plan:
+    description: autosleep db market place service plan to use
+    default: 100mb
+    
+  autosleep.security_group:
+    description: autosleep security group. must enable cf api access
+        
+  autosleep.security.user.name:
+    description: security username
+    default: broker
+  autosleep.security.user.password:
+    description: security password
+  autosleep.cf.client.target.host:
+    description: cloudfoundry hostname 
+  autosleep.cf.client.skip.ssl.validation:
+    description: should skip ssl validation for unsigned cf api
+    default: false
+  autosleep.cf.client.username:
+    description: cloudfoundry username
+  autosleep.cf.client.password:
+    description: cloudfoundry password
+  autosleep.cf.client.clientId:
+    decription: oauth client_id
+    default: cf
+  autosleep.cf.client.clientSecret:
+    description: client_secret
+    default: ""
+  autosleep.cf.security.password.encodingSecret:
+    description: password_encoding_secret
+    default: ""
+  autosleep.cf.service.broker.id:
+    description: service_broker_id, seen as service offering name
+    default: autosleep
+  autosleep.cf.service.plan.id:
+    description: service_plan_id
+    default: default    
     
 
     
