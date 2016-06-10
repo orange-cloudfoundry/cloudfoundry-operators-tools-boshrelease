@@ -17,3 +17,8 @@ cachet-monitor/cachet-monitor_linux_amd64:
   sha: !binary |-
     Nzg5NWFiZjZhODIwZjMyYzg0MWI3MzczNmE5MTFlNWM1ZGYxZDM3Mg==
   size: 8566136
+openjdk/openjdk.tar.gz:
+  object_id: d2baefdb-09ae-4950-9465-4b19154d2c37
+  sha: !binary |-
+    OWZjNjU5MDg0MjBjOTIwNDczNDZlNWJjYzY2ZmVlMGFhZDQyMmM1ZQ==
+  size: 126476497
