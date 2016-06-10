@@ -24,6 +24,13 @@ cf push $CF_APP_NAME  -p /var/vcap/packages/autowakeup_proxy_pkg/autosleep-core.
 cf map-route $CF_APP_NAME $CF_DOMAIN --hostname $CF_APP_NAME  
 
 
+
+#set autowake on the concerned domains
+cf create-route $CF_TARGET_SPACE  mydomain.org -n '*'
+cf map-route $CF_APP_NAME mydomain.org --hostname '*'
+
+
+
 #set cf env properties
 cf set-env $CF_APP_NAME JAVA_OPTS "-Djava.security.egd=file:/dev/urandom"
 cf set-env $CF_APP_NAME JBP_CONFIG_CONTAINER_CERTIFICATE_TRUST_STORE '{enabled: true}'

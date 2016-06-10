@@ -10,11 +10,12 @@ templates:
   bin/errand.sh.erb: bin/errand.sh
 
 properties:
-  director_url:
+  xx:
     description: bosh director url
     example: https://10.0.0.1:25555
+    default: xx
     
-    
+
     
   cf.api_url:
     description: 'Full URL of Cloud Foundry API'
