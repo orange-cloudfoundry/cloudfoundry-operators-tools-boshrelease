@@ -7,8 +7,7 @@ set -x
 cd ${BUILD_DIR}/autosleep/spring-apps/autosleep-core
 
 ../../gradlew build
-#./mvnw clean install -DskipTests=true --settings settings.xml
-mv build/bin/autosleep-core-0.3.0-SNAPSHOT.war  ${BUILD_DIR}
+mv build/libs/org.cloudfoundry.autosleep.autosleep-core-0.3.0.war  ${BUILD_DIR}
 
 
 cd ${BUILD_DIR}

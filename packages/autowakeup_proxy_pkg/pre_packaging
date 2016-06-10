@@ -6,8 +6,7 @@ set -x
 
 cd ${BUILD_DIR}/autosleep/spring-apps/autowakeup-proxy
 ../../gradlew build
-#./mvnw clean install -DskipTests=true --settings settings.xml
-mv build/bin/autowakeup-proxy-0.3.0-SNAPSHOT.war  ${BUILD_DIR}
+mv build/libs/org.cloudfoundry.autosleep.autowakeup-proxy-0.3.0.war ${BUILD_DIR}
 
 
 cd ${BUILD_DIR}
