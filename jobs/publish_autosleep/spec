@@ -10,12 +10,6 @@ templates:
   bin/errand.sh.erb: bin/errand.sh
 
 properties:
-  director_url:
-    description: bosh director url
-    example: https://10.0.0.1:25555
-
-
-
 
   autosleep.broker_name:
     description: registration name of the broker
@@ -50,12 +44,13 @@ properties:
     default: ""
   autosleep.cf.security.password.encodingSecret:
     description: password_encoding_secret
+    default: ""
   autosleep.cf.service.broker.id:
     description: service_broker_id, seen as service offering name
     default: autosleep
   autosleep.cf.service.plan.id:
     description: service_plan_id
-    default: autosleep    
+    default: default    
     
   cf.api_url:
     description: 'Full URL of Cloud Foundry API'
