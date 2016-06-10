@@ -9,6 +9,8 @@ The idea is to ease bosh ops activities, providing them usefull features, packag
 
 ### Cachet Server and Monitor
 
+Cachet server enables cloudfoundry operator to give health status for end users. 
+
 This release provide 2 bosh errands, pushing cf application for :
 * cachet server
 * cachet monitor
@@ -19,8 +21,11 @@ usefull links:
 
 prerequisite:
 * a cloudfoundry org admin account
-* cf marketplace with mysql for zipkin server
+* cf marketplace with mysql for cachet persistent
+* optional redis cf marketplace service, for cachet caching
 * open cf application security group, so that cachet monitor can reach cachet server
+
+
 
 
 ## Usage
