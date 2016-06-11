@@ -29,6 +29,8 @@ cf map-route $CF_APP_NAME $CF_DOMAIN --hostname $CF_APP_NAME
 cf create-route $CF_TARGET_SPACE  <%= p("autosleep.wake_domain") %> -n '*'
 cf map-route $CF_APP_NAME <%= p("autosleep.wake_domain") %> --hostname '*'
 
+# set shared db with autosleep cf app
+cf bind-service $CF_APP_NAME autosleep-mysql
 
 #prepare JAVA_OPTS to pass setting to the spring app
 JAVA_OPTS="-Djava.security.egd=file:/dev/urandom \
