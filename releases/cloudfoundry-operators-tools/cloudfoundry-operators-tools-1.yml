@@ -1,0 +1,102 @@
+---
+packages:
+- name: autosleep_core_pkg
+  version: !binary |-
+    NDYxZDRiZjYyNWZiMzY1MTlhZDQ3NWRhODA3ZWRlNGZmNjk2ZDE5NQ==
+  fingerprint: !binary |-
+    NDYxZDRiZjYyNWZiMzY1MTlhZDQ3NWRhODA3ZWRlNGZmNjk2ZDE5NQ==
+  sha1: !binary |-
+    YjNmOTY1ODk4ODk1MGJmNWVmZTNlNDUyYTAyN2FiODZhMDY2OWVlMQ==
+  dependencies: []
+- name: cachet-cf-ready
+  version: !binary |-
+    YzNjY2QzMDUzN2JlMmM0ZTkwMjRhMDJlNjU5YjhiNjJiZjc3ZWE3OQ==
+  fingerprint: !binary |-
+    YzNjY2QzMDUzN2JlMmM0ZTkwMjRhMDJlNjU5YjhiNjJiZjc3ZWE3OQ==
+  sha1: !binary |-
+    YWViNWJkODQyYjA2YWJhZDExMTE4OGUzNDNmNjRiZWQzYjQ0MDNiOQ==
+  dependencies: []
+- name: openjdk
+  version: !binary |-
+    OTNjMDcyODkxMDYyZjQzZTZhN2ZhZDFmMzIzMjA2NGRhOTA0MjlhZg==
+  fingerprint: !binary |-
+    OTNjMDcyODkxMDYyZjQzZTZhN2ZhZDFmMzIzMjA2NGRhOTA0MjlhZg==
+  sha1: !binary |-
+    ZDBmODRlZDg0M2I3ZDMxYzBhZmIwMzcxMThjY2U1OTI0ZTUyY2E5Mg==
+  dependencies: []
+- name: jq
+  version: !binary |-
+    YjA4MzFhOTI0ZjE4OTI2YjhmODNkMTA1YTE2ZDI3MTg0MDdmYTAzYw==
+  fingerprint: !binary |-
+    YjA4MzFhOTI0ZjE4OTI2YjhmODNkMTA1YTE2ZDI3MTg0MDdmYTAzYw==
+  sha1: 9370a99ee808ed536e8b848bb8154477294d6f87
+  dependencies: []
+- name: autowakeup_proxy_pkg
+  version: !binary |-
+    Y2ZiNDMwMTRjODA2NzQ1ZjQ0NWYxNWU5YTRhNzUzZGM1NmQ3ZjFkZg==
+  fingerprint: !binary |-
+    Y2ZiNDMwMTRjODA2NzQ1ZjQ0NWYxNWU5YTRhNzUzZGM1NmQ3ZjFkZg==
+  sha1: !binary |-
+    NDc0NDcwMjc2OTJmMWM4ZDRkMDkwZGNlMzE4ZTZmYTkwMWQ4ZWViYw==
+  dependencies: []
+- name: cachet-monitor
+  version: !binary |-
+    MDUzNWFhNjk4N2YyMzA4MjkyZWQ2MGQ0MDBlMmQ4NDgyZTIyNmUyMQ==
+  fingerprint: !binary |-
+    MDUzNWFhNjk4N2YyMzA4MjkyZWQ2MGQ0MDBlMmQ4NDgyZTIyNmUyMQ==
+  sha1: !binary |-
+    OWQzYTlmZWFkNmY1Yjg4NmJiNzZhZWEwOTFhMTY3YWZkNDBiMjAwMA==
+  dependencies: []
+- name: cli
+  version: !binary |-
+    MGYxOWExZGY3ZWY3NzcyMDhjYzNiZmNkYzg3NWIyYjU2NjEzYWI0MA==
+  fingerprint: !binary |-
+    MGYxOWExZGY3ZWY3NzcyMDhjYzNiZmNkYzg3NWIyYjU2NjEzYWI0MA==
+  sha1: 19f0a657630619d880aa547910de8a8913a0877b
+  dependencies: []
+jobs:
+- name: publish_cachet_monitor
+  version: !binary |-
+    MjZlYTIzYmU0ODU4ODg2YjZlZTA4Yjk0YWFlMmNjNGI1NTZkNTg2Ng==
+  fingerprint: !binary |-
+    MjZlYTIzYmU0ODU4ODg2YjZlZTA4Yjk0YWFlMmNjNGI1NTZkNTg2Ng==
+  sha1: !binary |-
+    OWYxYTFhMzg4OTlmYjk3ZTEyNGM3NGM5Yzc4N2YzNjM4NDA0MDVkNw==
+- name: publish_cachet
+  version: !binary |-
+    N2E4MWY0ZjI1OTY0NDJiMTdhZTA0NTEwNDlkMzI0ZmRiNjk1ZDJiOA==
+  fingerprint: !binary |-
+    N2E4MWY0ZjI1OTY0NDJiMTdhZTA0NTEwNDlkMzI0ZmRiNjk1ZDJiOA==
+  sha1: !binary |-
+    NDFkYmIzNDRkMGQ5MDk5NGI3MjY2MzYyYjgzMWFmYTQyYTJjNWI2ZQ==
+- name: provision_autosleep
+  version: !binary |-
+    NGY3Mzg4NTIzNGY0MmJkNzdhMTdkYTc0NTg3ODcyNGY3MGJhMGZmYg==
+  fingerprint: !binary |-
+    NGY3Mzg4NTIzNGY0MmJkNzdhMTdkYTc0NTg3ODcyNGY3MGJhMGZmYg==
+  sha1: !binary |-
+    N2FiMjczYmQzNTBhMThiODU2MjAyNjkyYWExZmY2MWQ4OTllZTdiZg==
+- name: publish_autosleep
+  version: !binary |-
+    YjYzOWE4MzYzYzFkOGQwZDFlZjgwNDZjYTU4ZmI0NjczNDg3Nzk3OA==
+  fingerprint: !binary |-
+    YjYzOWE4MzYzYzFkOGQwZDFlZjgwNDZjYTU4ZmI0NjczNDg3Nzk3OA==
+  sha1: !binary |-
+    YWY1MTEwNTI4NGRiNzY2YTM3ZGVlMGJjMGIwYzJlYmE5M2M5MmQ5MA==
+- name: publish_autowakeup_proxy
+  version: !binary |-
+    ZjAzNGI1OWUyNjI0NDk4NjE2ODBjMzllOTRjNTM5MjY0NDdkMWU5OQ==
+  fingerprint: !binary |-
+    ZjAzNGI1OWUyNjI0NDk4NjE2ODBjMzllOTRjNTM5MjY0NDdkMWU5OQ==
+  sha1: !binary |-
+    NWM0MGY1NTUzMzY3YjVmMWJhN2RmMThmY2RjNDE2NzI0NmNiOWFkNA==
+license:
+  version: !binary |-
+    OGNhNjA4YmQzNTc4ZWUxN2MyMWVjNjg4NTM1MDlkMDM5ZGMyN2Q3NA==
+  fingerprint: !binary |-
+    OGNhNjA4YmQzNTc4ZWUxN2MyMWVjNjg4NTM1MDlkMDM5ZGMyN2Q3NA==
+  sha1: 8c0ac2f4c8219c31cf8cbe7b98e64da7a6e3fd0b
+commit_hash: 2cc7d7ee
+uncommitted_changes: true
+name: cloudfoundry-operators-tools
+version: '1'
