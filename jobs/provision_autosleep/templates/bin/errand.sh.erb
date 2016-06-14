@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
-export PATH=$PATH:/var/vcap/packages/cli
+export PATH=$PATH:/var/vcap/packages/cli/bin
+export PATH=$PATH:/var/vcap/packages/jq
 
 
 CF_API_URL='<%= p("cf.api_url") %>'
@@ -16,8 +17,20 @@ CF_DOMAIN='<%= p("cf.domain") %>'
 
 cf login -a $CF_API_URL  -u $CF_USERNAME -p $CF_PASSWORD  -o $CF_ORG -s $CF_DEFAULT_SPACE --skip-ssl-validation
 
+
+#extract service instances custom parameters
+
+idle-duration='<%= p("autosleep.services-instances.idle-duration") %>'
+exclude-from-auto-enrollment='<%= p("autosleep.services-instances.exclude-from-auto-enrollment") %>'
+auto-enrollment='<%= p("autosleep.services-instances.auto-enrollment") %>'
+secret='<%= p("autosleep.services-instances.secret") %>'
+autosleep-despite-route-services-error='<%= p("autosleep.services-instances.autosleep-despite-route-services-error") %>'
+
+
+
 #TODO: loop in org/spaces to create autosleep services
 
 
+cf cs autosleep default autosleep-service -c '{"idle-duration":"$idle-duration", "exclude-from-auto-enrollment":"$exclude-from-auto-enrollment", "auto-enrollment":"$auto-enrollment", "secret":"$secret", "autosleep-despite-route-services-error":"$autosleep-despite-route-services-error"}' 
 
 
