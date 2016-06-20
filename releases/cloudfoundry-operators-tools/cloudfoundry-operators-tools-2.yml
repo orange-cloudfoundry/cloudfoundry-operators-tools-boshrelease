@@ -1,0 +1,66 @@
+---
+packages:
+- name: autosleep_core_pkg
+  version: 461d4bf625fb36519ad475da807ede4ff696d195
+  fingerprint: 461d4bf625fb36519ad475da807ede4ff696d195
+  sha1: b3f9658988950bf5efe3e452a027ab86a0669ee1
+  dependencies: []
+- name: cachet-cf-ready
+  version: c3ccd30537be2c4e9024a02e659b8b62bf77ea79
+  fingerprint: c3ccd30537be2c4e9024a02e659b8b62bf77ea79
+  sha1: aeb5bd842b06abad111188e343f64bed3b4403b9
+  dependencies: []
+- name: openjdk
+  version: 93c072891062f43e6a7fad1f3232064da90429af
+  fingerprint: 93c072891062f43e6a7fad1f3232064da90429af
+  sha1: d0f84ed843b7d31c0afb037118cce5924e52ca92
+  dependencies: []
+- name: jq
+  version: b0831a924f18926b8f83d105a16d2718407fa03c
+  fingerprint: b0831a924f18926b8f83d105a16d2718407fa03c
+  sha1: 9370a99ee808ed536e8b848bb8154477294d6f87
+  dependencies: []
+- name: autowakeup_proxy_pkg
+  version: cfb43014c806745f445f15e9a4a753dc56d7f1df
+  fingerprint: cfb43014c806745f445f15e9a4a753dc56d7f1df
+  sha1: 47447027692f1c8d4d090dce318e6fa901d8eebc
+  dependencies: []
+- name: cachet-monitor
+  version: 0535aa6987f2308292ed60d400e2d8482e226e21
+  fingerprint: 0535aa6987f2308292ed60d400e2d8482e226e21
+  sha1: 9d3a9fead6f5b886bb76aea091a167afd40b2000
+  dependencies: []
+- name: cli
+  version: 0f19a1df7ef777208cc3bfcdc875b2b56613ab40
+  fingerprint: 0f19a1df7ef777208cc3bfcdc875b2b56613ab40
+  sha1: 19f0a657630619d880aa547910de8a8913a0877b
+  dependencies: []
+jobs:
+- name: publish_cachet_monitor
+  version: 26ea23be4858886b6ee08b94aae2cc4b556d5866
+  fingerprint: 26ea23be4858886b6ee08b94aae2cc4b556d5866
+  sha1: 9f1a1a38899fb97e124c74c9c787f363840405d7
+- name: publish_cachet
+  version: 7a81f4f2596442b17ae0451049d324fdb695d2b8
+  fingerprint: 7a81f4f2596442b17ae0451049d324fdb695d2b8
+  sha1: 41dbb344d0d90994b7266362b831afa42a2c5b6e
+- name: provision_autosleep
+  version: 2bd81ffc9f4530fb1f32daad566545da945d024c
+  fingerprint: 2bd81ffc9f4530fb1f32daad566545da945d024c
+  sha1: 81379c794c37f927530b5db607370ccf6b0ff71d
+- name: publish_autosleep
+  version: ddfaeccf60ed4e850dfcbdcd1f3558f799ef4153
+  fingerprint: ddfaeccf60ed4e850dfcbdcd1f3558f799ef4153
+  sha1: 6fc3652fc9d01ae933a3bdcc08736ddec3110bc4
+- name: publish_autowakeup_proxy
+  version: 88298b4ee7c619884486ec31d5e6583bdd01e25f
+  fingerprint: 88298b4ee7c619884486ec31d5e6583bdd01e25f
+  sha1: a18777ce33c8f4628a2fb22539c10603fc32fdf3
+license:
+  version: 8ca608bd3578ee17c21ec68853509d039dc27d74
+  fingerprint: 8ca608bd3578ee17c21ec68853509d039dc27d74
+  sha1: 8c0ac2f4c8219c31cf8cbe7b98e64da7a6e3fd0b
+commit_hash: 6bde1db5
+uncommitted_changes: true
+name: cloudfoundry-operators-tools
+version: '2'
