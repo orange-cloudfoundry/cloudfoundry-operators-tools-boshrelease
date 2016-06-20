@@ -30,31 +30,31 @@ properties:
     description: 'Password of the admin user'
     example: default
     
-autosleep.services-instances.idle-duration
-  description: Duration after which bound applications will be considered as inactive. The time format used is the ISO8601 duration format.
-  example: PT1H15M  stop the application after 1 hour and 15 minutes of inactivity.
-  default: 24H
+  autosleep.services-instances.idle-duration:
+    description: Duration after which bound applications will be considered as inactive. The time format used is the ISO8601 duration format.
+    example: PT1H15M  stop the application after 1 hour and 15 minutes of inactivity.
+    default: 24H
     
-autosleep.services-instances.exclude-from-auto-enrollment
-  description: If you don't want all the application to be automatically bound, you can set this parameter with a regular expression to filter on application names.
-  example: ".*"
-  default: none
+  autosleep.services-instances.exclude-from-auto-enrollment:
+    description: If you don't want all the application to be automatically bound, you can set this parameter with a regular expression to filter on application names.
+    example: ".*"
+    default: none
 
-autosleep.services-instances.auto-enrollment
-  description: forced / standard enrollment
-  default: standard
+  autosleep.services-instances.auto-enrollment:
+    description: forced / standard enrollment
+    default: standard
 
-autosleep.services-instances.secret
-  description: secret to enable bypassing force mode
-  example: xxxxx
+  autosleep.services-instances.secret:
+    description: secret to enable bypassing force mode
+    example: xxxxx
 
-autosleep.services-instances.autosleep-despite-route-services-error
-  description: By setting the value of this parameter to true, you skip the errors sent by route binding operations and put the application to sleep anyway. Be aware that the application will not be restarted automatically by the autosleep if requested.
-  default: false
+  autosleep.services-instances.autosleep-despite-route-services-error:
+    description: By setting the value of this parameter to true, you skip the errors sent by route binding operations and put the application to sleep anyway. Be aware that the application will not be restarted automatically by the autosleep if requested.
+    default: false
 
-autosleep.cf.filtered_orgs
-  description: orgs that should not be managed
+  autosleep.cf.filtered_orgs:
+    description: orgs that should not be managed
 
-autosleep.cf.filtered_spaces
-  description: spaces that should not be managed
+  autosleep.cf.filtered_spaces:
+    description: spaces that should not be managed
 
