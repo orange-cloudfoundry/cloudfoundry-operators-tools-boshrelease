@@ -57,4 +57,10 @@ autosleep.services-instances.secret
 autosleep.services-instances.autosleep-despite-route-services-error
   description: By setting the value of this parameter to true, you skip the errors sent by route binding operations and put the application to sleep anyway. Be aware that the application will not be restarted automatically by the autosleep if requested.
   default: false
-    
+
+autosleep.cf.filtered_orgs
+  description: orgs that should not be managed
+
+autosleep.cf.filtered_spaces
+  description: spaces that should not be managed
+
