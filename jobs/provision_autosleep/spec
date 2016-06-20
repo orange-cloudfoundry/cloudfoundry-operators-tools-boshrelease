@@ -29,12 +29,6 @@ properties:
   cf.default_space:
     description: 'Password of the admin user'
     example: default
-  cf.target_space:
-    description: 'Password of the admin user'
-  cf.appname:
-    description: cf app name to push. will also be the hostname on cf.domain
-  cf.domain:
-    description: domain name to expose the gateway
     
 autosleep.services-instances.idle-duration
   description: Duration after which bound applications will be considered as inactive. The time format used is the ISO8601 duration format.
