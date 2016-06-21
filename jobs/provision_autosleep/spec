@@ -29,6 +29,18 @@ properties:
   cf.default_space:
     description: 'Password of the admin user'
     example: default
+
+  autosleep.cf.service.broker.id:
+    description: service_broker_id, seen as service offering name
+    default: autosleep
+
+  autosleep.cf.service.plan.id:
+    description: service_plan_id
+    default: default 
+
+  autosleep.cf.service.instance.id:
+    description: service instance name
+    default: autosleep_service
     
   autosleep.services-instances.idle-duration:
     description: Duration after which bound applications will be considered as inactive. The time format used is the ISO8601 duration format.
