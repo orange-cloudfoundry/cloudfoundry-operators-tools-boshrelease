@@ -58,3 +58,7 @@ properties:
   autosleep.cf.filtered_spaces:
     description: spaces that should not be managed
 
+  autosleep.provision.dry_run:
+    description: Make possible to launch provision errand in dry run mode
+    default: false
+
