@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-#set -x
+set -x
 
 export PATH=$PATH:/var/vcap/packages/jq:/var/vcap/packages/cli/bin
 
@@ -22,6 +22,8 @@ AUTO_ENROLLMENT='<%= p("autosleep.services-instances.auto-enrollment") %>'
 EXCLUDE_FROM_AUTO_ENROLLMENT='<%= p("autosleep.services-instances.exclude-from-auto-enrollment") %>'
 AUTOSLEEP_DESPITE_ROUTE_SERVICES_ERROR='<%= p("autosleep.services-instances.autosleep-despite-route-services-error") %>'
 SECRET='<%= p("autosleep.services-instances.secret") %>'
+
+DRY_RUN='<%= p("autosleep.provision.dry_run") %>'
 
 cf login -a $CF_API_URL  -u $CF_USERNAME -p $CF_PASSWORD  -o $CF_DEFAULT_ORG -s $CF_DEFAULT_SPACE --skip-ssl-validation
 
@@ -60,8 +62,13 @@ do
       echo "AutoSleep is already enabled in org $org, space $space. We don't change anything."
     else
       echo "We are enabling Autosleep in org $org, space $space..."
-      #cf cs autosleep default autosleep-service -c '{"idle-duration":"$idle-duration", "exclude-from-auto-enrollment":"$EXCLUDE_FROM_AUTO_ENROLLMENT", "auto-enrollment":"$AUTO_ENROLLMENT", "secret":"$SECRET", "autosleep-despite-route-services-error":"$AUTOSLEEP_DESPITE_ROUTE_SERVICES_ERROR"}' 
-      cf create-service ${SERVICE_NAME} ${SERVICE_PLAN} ${SERVICE_INSTANCE_NAME} -c "{\"idle-duration\": \"${IDLE_DURATION}\":\"$EXCLUDE_FROM_AUTO_ENROLLMENT\", \"auto-enrollment\":\"$AUTO_ENROLLMENT\", \"secret\":\"$SECRET\", \"autosleep-despite-route-services-error\":\"$AUTOSLEEP_DESPITE_ROUTE_SERVICES_ERROR\"}"
+      if [ "$DRY_RUN" != "false" ]
+      then
+        echo "Dry mode enabled. We don't change anything"
+      else
+        #cf cs autosleep default autosleep-service -c '{"idle-duration":"$idle-duration", "exclude-from-auto-enrollment":"$EXCLUDE_FROM_AUTO_ENROLLMENT", "auto-enrollment":"$AUTO_ENROLLMENT", "secret":"$SECRET", "autosleep-despite-route-services-error":"$AUTOSLEEP_DESPITE_ROUTE_SERVICES_ERROR"}'
+        cf create-service ${SERVICE_NAME} ${SERVICE_PLAN} ${SERVICE_INSTANCE_NAME} -c "{\"idle-duration\": \"${IDLE_DURATION}\":\"$EXCLUDE_FROM_AUTO_ENROLLMENT\", \"auto-enrollment\":\"$AUTO_ENROLLMENT\", \"secret\":\"$SECRET\", \"autosleep-despite-route-services-error\":\"$AUTOSLEEP_DESPITE_ROUTE_SERVICES_ERROR\"}"
+      fi
     fi
     echo
     echo
