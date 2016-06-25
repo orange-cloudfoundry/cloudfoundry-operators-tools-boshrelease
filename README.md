@@ -6,6 +6,8 @@ The purpose of this bosh release is to offer some preconfigured cloudfoundry app
 
 The idea is to ease bosh ops activities, providing them usefull features, packaged in a bosh standard way (manifest, errand, etc ..)
 
+NB: the mechanism used is to push operator level cf apps inside cloudfoundry, including sensitive credentials. Take care to target an admin only visible organization (ie: system_domain)
+moreover, these operator tools wont be more available than the target cf deployment. Try cross deploying if you have multilple cf depl (ie: for cachet portal / cachet monitor) for high availability
 
 ### Orange AutoSleep Service for Cloudfoundry
 The aim of the auto-sleep project is to give the ability for Cloud Foundry operators to automatically have cf apps idled, after a given period of inactivity, and then automatically restarted when end users access apps again through traffic their routes.
