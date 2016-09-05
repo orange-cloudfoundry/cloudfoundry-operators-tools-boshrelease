@@ -50,7 +50,7 @@ properties:
     default: admin
   cachet.default_admin_password:
     description: cachet admin password  
-    default: p@ssw0rd
+    example: p@ssw0rd
   cachet.default_admin_email:
     description: cachet admin mail  
     example: admin@admin.com
@@ -64,7 +64,7 @@ properties:
     
   cachet.app_locale:
     example: en
-    defaut: en
+    default: en
 
   cachet.mail_address:
     example: support@mydomain.com # set the `from` mail address

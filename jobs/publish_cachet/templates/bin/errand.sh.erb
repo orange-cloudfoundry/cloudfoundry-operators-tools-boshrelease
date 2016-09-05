@@ -31,14 +31,14 @@ cf bind-service $CF_APP_NAME mysql-cachet
 cf set-env $CF_APP_NAME APP_KEY <%= p("cachet.app_key") %>
 cf set-env $CF_APP_NAME APP_DEBUG <%= p("cachet.app_debug") %>
 
-cf set-env $CF_APP_NAME DEFAULT_ADMIN_USERNAME <%= p("cachet.default_admin_username") %> : admin
-cf set-env $CF_APP_NAME DEFAULT_ADMIN_PASSWORD <%= p("cachet.default_admin_password") %>: p@ssw0rd
-cf set-env $CF_APP_NAME DEFAULT_ADMIN_EMAIL <%= p("cachet.default_admin_email") %>: admin@admin.com
-cf set-env $CF_APP_NAME DEFAULT_ADMIN_API_KEY <%= p("cachet.default_admin_api_key") %> : YWRtaW5wQHNzdzByZGFkbWlucGFzc3dvcmQ= # please change it
-cf set-env $CF_APP_NAME APP_TIMEZONE <%= p("cachet.app_timezone") %>: Europe/Paris
-cf set-env $CF_APP_NAME APP_LOCALE <%= p("cachet.app_locale") %>: en
-cf set-env $CF_APP_NAME MAIL_ADDRESS <%= p("cachet.mail_address") %> : support@mydomain.com # set the `from` mail address
-cf set-env $CF_APP_NAME USE_SSL: <%= p("cachet.use_ssl") %> false # to enforce https on your app
+cf set-env $CF_APP_NAME DEFAULT_ADMIN_USERNAME <%= p("cachet.default_admin_username") %>
+cf set-env $CF_APP_NAME DEFAULT_ADMIN_PASSWORD <%= p("cachet.default_admin_password") %>
+cf set-env $CF_APP_NAME DEFAULT_ADMIN_EMAIL <%= p("cachet.default_admin_email") %>
+cf set-env $CF_APP_NAME DEFAULT_ADMIN_API_KEY <%= p("cachet.default_admin_api_key") %> 
+cf set-env $CF_APP_NAME APP_TIMEZONE <%= p("cachet.app_timezone") %>
+cf set-env $CF_APP_NAME APP_LOCALE <%= p("cachet.app_locale") %>
+cf set-env $CF_APP_NAME MAIL_ADDRESS <%= p("cachet.mail_address") %>
+cf set-env $CF_APP_NAME USE_SSL: <%= p("cachet.use_ssl") %>
 
 
 

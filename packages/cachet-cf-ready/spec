@@ -2,4 +2,4 @@
 name: cachet-cf-ready
 dependencies: []
 files:
-- cachet-cf-ready/cachet-cf-bundled.zip
+- cachet-cf-ready/2.3.0/cachet-cf-bundled.zip
