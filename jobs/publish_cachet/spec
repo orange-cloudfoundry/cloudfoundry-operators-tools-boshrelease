@@ -45,4 +45,31 @@ properties:
     description: cachet debug mode
     default: false
     
+  cachet.default_admin_username:
+    description: cachet admin username
+    default: admin
+  cachet.default_admin_password:
+    description: cachet admin password  
+    default: p@ssw0rd
+  cachet.default_admin_email:
+    description: cachet admin mail  
+    example: admin@admin.com
+    
+  cachet.default_admin_api_key:
+    description: api key to access cachet API, use a random char string  
+
+  cachet.app_timezone:
+    example: Europe/Paris
+    default: Europe/Paris
+    
+  cachet.app_locale:
+    example: en
+    defaut: en
+
+  cachet.mail_address:
+    example: support@mydomain.com # set the `from` mail address
+    description: origin of the notification mail sent from cachet
+    
+  cachet.use_ssl:
+    default: true # to enforce https on your app
     
