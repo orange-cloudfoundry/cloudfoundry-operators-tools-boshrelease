@@ -1,11 +1,25 @@
 #!/bin/sh
-curl -H "Content-Type: application/json;" -H "X-Cachet-Token: YOUR_KEY_HERE" -d '{"name":"API","description":"An example description","status":1}' http://status.cachethq.io/api/v1/components \
+curl -X POST -H "Content-Type: application/json;" -H "X-Cachet-Token: <%= p("cachet.api_token") %>"  <%= p("cachet.api_url") %>/components -k \
+-d @- << EOF
+
+{
+    "name": "component name",
+    "description": "description",
+    "status": 1,
+    "enabled": true
+}
+EOF
+
+
+#create metrics
+curl -X POST -H "Content-Type: application/json;" -H "X-Cachet-Token: <%= p("cachet.api_token") %>"  <%= p("cachet.api_url") %>/metrics -k \
 -d @- << EOF
 
 {
     "name": "name",
-    "description": "descrip^topn",
-    "status": 0,
-    "enabled": true
+    "suffix": "suffix",
+    "description": "desc",
+    "default_value": 0
 }
 EOF
+

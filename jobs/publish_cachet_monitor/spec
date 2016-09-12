@@ -3,11 +3,13 @@ name: publish_cachet_monitor
 packages:
 - cachet-monitor
 - cli
+- jq
 templates:
   bin/run: bin/run
   helpers/ctl_setup.sh: helpers/ctl_setup.sh
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
   bin/errand.sh.erb: bin/errand.sh
+  bin/provision_cachet.sh.erb: bin/provision_cachet.sh  
   config/config.json.erb: config/config.json
   config/Procfile.erb: config/Procfile
   config/index.html.erb: config/index.html
