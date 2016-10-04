@@ -26,6 +26,30 @@ prerequisite:
 * open cf application security group, so that autosleep and autowakeup cf apps can acces the cloudfoundry api
 
 
+### Bosh Zuul Proxy
+
+Bosh zuul proxy enables https access to a bosh director through a Cloudfoundry deployment (go router, zuul deployed as a cf app) 
+
+This release provide 1 bosh errands pushing cf application for :
+* bosh-zuul proxy
+
+
+recommanded reading before use:
+* http://bosh.io/docs/director-api-v1.html
+* http://bosh.io/docs/director-certs.html
+* https://docs.pivotal.io/pivotalcf/1-7/buildpacks/java/bosh_custom_trusted_certs.html
+* https://github.com/spring-cloud/spring-cloud-netflix/blob/master/docs/src/main/asciidoc/spring-cloud-netflix.adoc#cookies-and-sensitive-headers
+* Example use case: bosh-deployer https://github.com/orange-cloudfoundry/bosh-deployer
+
+prerequisite:
+* a cloudfoundry org admin account
+* a Bosh director, with ssl ca cert set
+* open cf application security group, so that zuul proxy can reach backend director API
+
+NB:
+* the authentication is still basic-auth, performed by Bosh Director. The Zuul proxy propagates the basic-auth header
+* Must on configure the zuul proxy with the SSL cert of the Bosh Director (inbound ssl access is using usual Cloudfoundry domain ssl cert)
+
 
 ### Cachet Server and Monitor
 
