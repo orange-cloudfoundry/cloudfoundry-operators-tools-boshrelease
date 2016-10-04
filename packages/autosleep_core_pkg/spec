@@ -1,7 +1,0 @@
----
-name: autosleep_core_pkg
-dependencies: []
-files:
-- autosleep/**/*
-- openjdk/*
-- common/setup-java-prepackaging.sh

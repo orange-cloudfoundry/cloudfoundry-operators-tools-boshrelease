@@ -9,16 +9,17 @@ cli/cli-linux-amd64-6.17.0.tgz:
   size: 6153376
 cachet-cf-ready/cachet-cf-bundled.zip:
   object_id: 8f0181ae-1ccf-47f9-947a-a68777f62655
-  sha: !binary |-
-    ZTBlNTVjOThlNWNiNzdjOWJjNjY1NmE5ZTIxZTBkZmM3YjVlOTFmMw==
+  sha: e0e55c98e5cb77c9bc6656a9e21e0dfc7b5e91f3
   size: 8509761
 cachet-monitor/cachet-monitor_linux_amd64:
   object_id: ef700c57-84c6-4936-8c1b-ae531701e4ec
-  sha: !binary |-
-    Nzg5NWFiZjZhODIwZjMyYzg0MWI3MzczNmE5MTFlNWM1ZGYxZDM3Mg==
+  sha: 7895abf6a820f32c841b73736a911e5c5df1d372
   size: 8566136
 openjdk/openjdk.tar.gz:
   object_id: d2baefdb-09ae-4950-9465-4b19154d2c37
-  sha: !binary |-
-    OWZjNjU5MDg0MjBjOTIwNDczNDZlNWJjYzY2ZmVlMGFhZDQyMmM1ZQ==
+  sha: 9fc65908420c92047346e5bcc66fee0aad422c5e
   size: 126476497
+cachet-cf-ready/2.3.0/cachet-cf-bundled.zip:
+  object_id: 409d1ef5-c6d1-4119-98b4-2bc6ae3c2d39
+  sha: e36e74df66d9d14aee52aadc39f858355c9cab6e
+  size: 10563636
